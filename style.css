@@ -94,8 +94,9 @@ main {
   margin: 80px 10px;
 }
 
-.card:first-of-type {
+.cards-container {
   margin-top: 25px;
+  margin-inline: 10px;
 }
 
 .card {
@@ -108,7 +109,6 @@ main {
 
 .card-image-container {
   width: 100%;
-  height: calc(100vw - 20px);
   display: grid;
   place-content: center;
   color: #ffffff;
@@ -129,6 +129,12 @@ main {
 
 .project-description {
   margin-inline: 20px;
+}
+
+main,
+header {
+  max-width: 500px;
+  margin-inline: auto;
 }
 
 .card-image-container--orange {
@@ -163,4 +169,105 @@ footer {
 
 .contact__title {
   margin-top: 0;
+}
+
+.card-image-container p {
+  margin-block: 100px;
+}
+
+.footer-portrait {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  main,
+  header {
+    max-width: 100%;
+  }
+
+  .portrait__text {
+    right: -15rem;
+    top: 0;
+  }
+  .portrait__image {
+    height: 400px;
+  }
+  .social-links {
+    display: none;
+  }
+  header {
+    position: relative;
+    padding-top: 40px;
+    /* padding-inline: 40px; */
+  }
+  .header-bg-shape {
+    height: 75%;
+  }
+
+  .portrait {
+    /* position: absolute; */
+    /* display: inline-block; */
+
+    float: left;
+    width: 60%;
+    margin-top: 0;
+    margin-left: 40px;
+
+    /* display: none; */
+  }
+  .about {
+    background-color: #ffffff;
+    /* border: 1px solid #000000; */
+    margin: 100px 80px 0 80px;
+    padding: 40px 20px;
+    /* margin: 0; */
+
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  main {
+    margin-inline: 80px;
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    margin-inline: 0;
+  }
+
+  .card-image-container {
+    height: auto;
+  }
+  .card-image-container p {
+    margin-block: 100px;
+  }
+
+  .footer-portrait {
+    display: block;
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px 60px 20px;
+  }
+
+  .footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+  }
+  .contact__title {
+    text-align: left;
+  }
+  .social-links--footer {
+    display: flex !important;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
 }
